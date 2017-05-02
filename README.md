@@ -4,7 +4,7 @@ Slides and demo for my "Journey to a performant website" talk.
 
 To view the slides and demo:
 
-1. Install dynassets
+1. Install [dynassets](https://github.com/prashantpalikhe/dynassets)
 
 ```bash
 $ npm i -g dynassets
