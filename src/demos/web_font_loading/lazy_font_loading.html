@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy font loading by browsers</title>
+    <style>
+        @font-face {
+            font-family: 'Somefont';
+            src: url('http://localhost:3000/asset/font/6000') format('woff2');
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        body {
+            margin: 0;
+            padding: 50px;
+            color: #2f2f2f;
+            background-color: #f9f7f1;
+        }
+
+        p, h1  {
+            font-family: 'Somefont';
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Lazy font loading</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias autem ducimus eaque enim nemo nostrum quibusdam voluptatem! Ab accusamus accusantium aspernatur atque beatae consequuntur culpa cumque, deleniti doloribus ducimus eaque eligendi est expedita facilis harum hic inventore ipsum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias autem ducimus eaque enim nemo nostrum quibusdam voluptatem! Ab accusamus accusantium aspernatur atque beatae consequuntur culpa cumque, deleniti doloribus ducimus eaque eligendi est expedita facilis harum hic inventore ipsum, itaque iusto minima minus molestiae necessitatibus nesciunt nihil officiis placeat, porro quasi rem repellat reprehenderit saepe soluta unde ut vero vitae voluptates voluptatum! Amet asperiores deserunt, dignissimos dolor doloremque ducimus eveniet ex facere hic id impedit ipsam iure molestiae natus nemo neque nisi nobis obcaecati odit pariatur praesentium quas quisquam repudiandae rerum sapiente, sequi similique tempore veniam vitae voluptates. Recusandae, saepe?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias autem ducimus eaque enim nemo nostrum quibusdam voluptatem! Ab accusamus accusantium aspernatur atque beatae consequuntur culpa cumque, deleniti doloribus ducimus eaque eligendi est expedita facilis harum hic inventore ipsum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias autem ducimus eaque enim nemo nostrum quibusdam voluptatem! Ab accusamus accusantium aspernatur atque beatae consequuntur culpa cumque, deleniti doloribus ducimus eaque eligendi est expedita facilis harum hic inventore ipsum, itaque iusto minima minus molestiae necessitatibus nesciunt nihil officiis placeat, porro quasi rem repellat reprehenderit saepe soluta unde ut vero vitae voluptates voluptatum! Amet asperiores deserunt, dignissimos dolor doloremque ducimus eveniet ex facere hic id impedit ipsam iure molestiae natus nemo neque nisi nobis obcaecati odit pariatur praesentium quas quisquam repudiandae rerum sapiente, sequi similique tempore veniam vitae voluptates. Recusandae, saepe?</p>
+    </main>
+</body>
+</html>

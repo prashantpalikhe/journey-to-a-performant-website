@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Different images loading comparison</title>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.wrapper {
+			position: relative;
+			float: left;
+			width: 33vw;
+			height: 100vh;
+		}
+
+		.info {
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: white;
+			background: #000;
+			text-align: center;
+			margin: 0;
+			padding: 20px;
+			width: 100%;
+			opacity: 0;
+			transition: opacity 0.2s ease-out;
+		}
+
+		.info.is-shown {
+			opacity: 1;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		button {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			appearance: none;
+			background: #ff6d00;
+			width: 75px;
+			height: 75px;
+			border-radius: 50%;
+			outline: none;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+
+		button:active {
+			top: 21px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<img src="baseline.jpg" >
+		<p class="info">Baseline 876KB</p>	
+	</div>
+
+	<div class="wrapper">
+		<img src="progressive.jpg">	
+		<p class="info">Progressive 833KB</p>	
+	</div>
+	
+	<div class="wrapper">
+		<img src="baseline.webp">
+		<p class="info">WebP 296KB</p>		
+	</div>
+
+	<button>Reveal</button>
+
+	<script type="text/javascript">
+		const button = document.querySelector('button');
+
+		button.addEventListener('click', function () {
+			button.style.display = 'none';
+			Array.from(document.querySelectorAll('.info')).forEach(function (info) {
+				info.classList.add('is-shown');
+			});
+		});
+	</script>
+</body>
+</html>

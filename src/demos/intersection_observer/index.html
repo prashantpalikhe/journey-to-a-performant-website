@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lazy loading using Intersection Observer</title>
+	<style type="text/css">
+		img {
+			display: block;
+			margin: 0 auto 20px;
+			height: 600px;
+			width: 600px;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+
+<img src="http://lorempixel.com/600/600/sports/" >
+<img src="http://lorempixel.com/600/600/abstract/">
+<img class="lazy" src="" data-src="http://lorempixel.com/600/600/city/">
+<img class="lazy" src="" data-src="http://lorempixel.com/600/600/people/">
+<img class="lazy" src="" data-src="http://lorempixel.com/600/600/nature/">
+<img class="lazy" src="" data-src="http://lorempixel.com/600/600/technics/">
+
+<script type="text/javascript">
+	// create observer
+	const observer = new IntersectionObserver(onChange);
+
+	function onChange(changes) {
+  		changes.forEach(change => {
+            if ((typeof change.isIntersecting !== 'undefined') && change.isIntersecting === false) {
+				return false;
+        	}
+
+		    // take image url from `data-src` attribute
+		    change.target.src = change.target.dataset.src;
+
+		    // stop observing the current target
+		    observer.unobserve(change.target);
+	  	});
+	}
+
+	// convert node list to array
+	const imgs = [ ...document.querySelectorAll('.lazy') ];
+
+	// observe each image
+	imgs.forEach(img => observer.observe(img));
+</script>
+</body>
+</html>

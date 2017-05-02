@@ -1,0 +1,23 @@
+{
+  "name": "journeytoaperformantwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashantpalikhe/journey-to-a-performant-website.git"
+  },
+  "author": "Prashant <prashpal09@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prashantpalikhe/journey-to-a-performant-website/issues"
+  },
+  "homepage": "https://github.com/prashantpalikhe/journey-to-a-performant-website#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "serve-index": "^1.8.0"
+  }
+}
