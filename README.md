@@ -2,7 +2,10 @@
 
 Slides and demo for my "Journey to a performant website" talk. 
 
-To view the slides and demo:
+- [Slides](http://slides.com/prashantpalikhe/journey-to-a-performant-website)
+
+
+To view the slides and play around with the demo locally:
 
 1. Install [dynassets](https://github.com/prashantpalikhe/dynassets)
 
